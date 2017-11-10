@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
+import Home from './Home/Home.js';
+import Album from './JSON/Album.js';
+import Photos from './JSON/Photos.js';
+import Posts from './JSON/Posts.js';
+import $ from 'jquery'; 
+
 
 class App extends Component {
   render() {
-    return (
+    return (      
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Bienvenidos a React Appdd...</h2>
-        </div>
-        <p className="App-intro">
-          To get started,ss edit <code>src/App.js</code> and save to reload.      
-        </p>
+        <Router>
+          <div>
+          <nav>
+      <Link to ='/'>Home</Link>
+      <Link to ='/Album'>Albums</Link>
+      <Link to ='/Album/Fotos'>Fotos</Link>
+      <Link to ='/Album/Comentarios'>Comentarios</Link>
+      </nav>
+      <Route exact path='/' component={Home}/>
+      <Route  path='/Album' component={Album}/>
+      <Route  path='/Album/Fotos' component={Photos}/>
+      <Route  path='/Album/Comentarios' component={Posts}/>
+      </div>
+        </Router>              
       </div>
     );
   }

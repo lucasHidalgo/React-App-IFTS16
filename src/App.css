@@ -22,3 +22,16 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+nav{margin:20px;  
+  height: 30px;
+  background-color: lightblue;
+  
+  
+}
+a{
+  color:rgb(38, 44, 51);
+  text-decoration:none;
+  padding:10px;
+  
+}
+
