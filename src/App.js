@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 import Home from './Home/Home.js';
-import Album from './JSON/Album.js';
-import Photos from './JSON/Photos.js';
-import Posts from './JSON/Posts.js';
+import Album from './Album/Album.js';
+import Photos from './Photos/Photos.js';
+import Posts from './Posts/Posts.js';
 import $ from 'jquery'; 
 
 
