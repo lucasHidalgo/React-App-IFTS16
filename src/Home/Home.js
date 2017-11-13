@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-import $ from 'jquery'; 
+import axios from 'axios';
 
 export default class Home extends Component{
    constructor(){
        super();
        this.state = {items:[]}
    }
-   componentWillMount(){
-       fetch('https://swapi.co/api/people/?fformat=json')
-       .then( response => response.json() )
-       .then( ({results : items}) => this.setState({items}))
+   componentWillMount(){  
+    var _this = this;
+    axios
+    .get("https://swapi.co/api/people/?fformat=json")
+    .then(function(result){
+        _this.setState({
+            items: result.data.results
+          });
+    })
+    ;
    }
 
     render(){
