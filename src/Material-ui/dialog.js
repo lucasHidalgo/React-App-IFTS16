@@ -47,7 +47,9 @@ export default class Dialogo extends React.Component {
           open={this.state.open}
           onRequestClose={this.handleClose}
         >
-          (fotos)
+          <photos/>
+
+          
         </Dialog>
       </div>
     );
