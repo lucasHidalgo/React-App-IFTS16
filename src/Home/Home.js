@@ -3,12 +3,10 @@ import axios from 'axios';
 import AppBar from 'material-ui/AppBar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-export default class Home extends Component{
-    
+export default class Home extends Component{    
     constructor(){
        super();
-       this.state = {items:[]}
-     
+       this.state = {items:[]}     
    }
    componentWillMount(){  
     var _this = this;
@@ -19,17 +17,15 @@ export default class Home extends Component{
             items: result.data.results
           });
     });    
-   }
-
-
-   
+   }   
     render(){            
         return(
+            <div>
             <MuiThemeProvider>
-            <AppBar title="My AppBar" />
+            <AppBar title="My AppBar" />            
           </MuiThemeProvider>
-        )
-     
-    }
-    
+          <h4>esto es home</h4>
+          </div>
+        )     
+    }   
 }

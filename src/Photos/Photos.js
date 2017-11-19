@@ -24,8 +24,7 @@ export default class Photos extends Component{
 		 console.log(filtro);
 		 $(".prueba").append(
 			filtro.map(item => "<div><h3>"+ item.title +"</h3>\
-								<img src="+item.url +"/> </div><hr/>")
-
+								<img src="+ item.url+" width=30% height=30%/> </div><hr/>")
 		 );
 	  });			   
   }	   	 

@@ -4,12 +4,24 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import { } from '../Photos/Photos.js';
-const customContentStyle = {
-  width: '80%',
-  maxWidth: 'none',
-  height:'70%',
-  maxHeight:'none'
 
+
+
+var styles = {
+  dialogRoot: {
+    
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 0
+  },
+  dialogContent: {
+    position: 'relative',
+    width: '80%',
+    maxWidth: "none"
+  },
+  dialogBody: {
+    paddingBottom: 0
+  }
 };
 /**
  * Dialog with action buttons. The actions are passed in as an array of React objects,
@@ -33,12 +45,12 @@ export default class Dialogo extends React.Component {
   render() {
     const actions = [
       <FlatButton
-        label="Cancel"
+        label="Cerrar"
         primary={true}
         onClick={this.handleClose}
       />,
       <FlatButton
-        label="Submit"
+        label="Ok"
         primary={true}
         keyboardFocused={true}
         onClick={this.handleClose}
@@ -52,11 +64,15 @@ export default class Dialogo extends React.Component {
         <Dialog
           title="Fotos"
           actions={actions}
+          bodyStyle={ styles.dialogBody }
+          style={ styles.dialogRoot }
+          repositionOnUpdate={ false }
           modal={false}
           open={this.state.open}
           onRequestClose={this.handleClose}
           autoScrollBodyContent={true}
-          contentStyle={customContentStyle}
+          contentStyle={styles.dialogContent}
+          autoDetectWindowHeight={true}
         >
         <Photos />     
         </Dialog>

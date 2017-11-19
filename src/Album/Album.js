@@ -41,7 +41,9 @@ export default class Album extends Component{
 				<MuiThemeProvider>
 				<span onClick={() => this.obtenerFotos(album.id)}> <Dialogo/></span>
 			 </MuiThemeProvider>							
-				</div>				
+			 <hr style={{width : 600}}/>
+				</div>	
+							
 				)}             
         </div>
         )
