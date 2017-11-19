@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import AppBar from 'material-ui/AppBar';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export default class Home extends Component{
-   constructor(){
+    
+    constructor(){
        super();
        this.state = {items:[]}
+     
    }
    componentWillMount(){  
     var _this = this;
@@ -14,15 +18,18 @@ export default class Home extends Component{
         _this.setState({
             items: result.data.results
           });
-    })
-    ;
+    });    
    }
 
-    render(){
-        let items = this.state.items;
-        return(<div>              
-            {items.map(item => <h4 key={item.name}>{item.name}</h4>)}       
-        </div>)
+
+   
+    render(){            
+        return(
+            <MuiThemeProvider>
+            <AppBar title="My AppBar" />
+          </MuiThemeProvider>
+        )
+     
     }
     
 }

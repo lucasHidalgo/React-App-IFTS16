@@ -4,15 +4,18 @@ import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import Dialogo from '../Material-ui/dialog';
+import Photos from '../Photos/Photos.js';
 
 
 
 export default class Album extends Component{
+	
 	constructor(){
 		super();
-		this.state = { albums:[] };
+		this.state = { albums:[] };			
 	}
 	   
+
 	componentWillMount(){	
 		var _this = this;
 		axios
@@ -21,22 +24,13 @@ export default class Album extends Component{
 			_this.setState({
 				albums: result.data
 			  });
-		});
+			  
+		});			
 	   }
-
 	   obtenerFotos(id){
-				console.log("Usted selecciono el album " + id);
-				/*
-				Hacer que este metodo filtre las fotos de acuerdo al id del parametro.
-				axios.get(fotos).then((respuesta=> DIALOGO.setState({
-					photos: result.data
-				});
-				let fotosPorId = DIALOGO.state.photos;
-				fotosPorId.filter(foto => ...logica del filter.)	
-			)
-				*/						
-	   }
-
+			Photos.prototype.filtrarFotos(id)
+			console.log("Usted selecciono el album " + id);									
+		}
     render(){
 		let albums = this.state.albums;		
         return(					

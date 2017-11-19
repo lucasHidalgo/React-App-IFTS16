@@ -5,7 +5,7 @@ import Home from './Home/Home.js';
 import Album from './Album/Album.js';
 import Photos from './Photos/Photos.js';
 import Posts from './Posts/Posts.js';
-import $ from 'jquery'; 
+
 
 
 class App extends Component {

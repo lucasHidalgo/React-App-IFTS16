@@ -1,8 +1,16 @@
+import Photos from '../Photos/Photos';
 import React from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
+import { } from '../Photos/Photos.js';
+const customContentStyle = {
+  width: '80%',
+  maxWidth: 'none',
+  height:'70%',
+  maxHeight:'none'
 
+};
 /**
  * Dialog with action buttons. The actions are passed in as an array of React objects,
  * in this example [FlatButtons](/#/components/flat-button).
@@ -25,31 +33,32 @@ export default class Dialogo extends React.Component {
   render() {
     const actions = [
       <FlatButton
-        label="Cancelar"
+        label="Cancel"
         primary={true}
         onClick={this.handleClose}
       />,
       <FlatButton
-        label="Ok"
+        label="Submit"
         primary={true}
         keyboardFocused={true}
         onClick={this.handleClose}
       />,
-    ];
+    ];   
+ 
 
     return (
       <div>
         <RaisedButton label="Ver fotos" onClick={this.handleOpen} />
         <Dialog
-          title="Las fotos para el album."
+          title="Fotos"
           actions={actions}
           modal={false}
           open={this.state.open}
           onRequestClose={this.handleClose}
+          autoScrollBodyContent={true}
+          contentStyle={customContentStyle}
         >
-          <photos/>
-
-          
+        <Photos />     
         </Dialog>
       </div>
     );

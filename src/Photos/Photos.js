@@ -1,28 +1,40 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
+import Album from '../Album/Album.js';
+import $ from 'jquery';
+
 
 export default class Photos extends Component{
-    constructor(){
+	
+	constructor(){
 		super();
-		this.state = { photos:[] };
-	}
-	   
-	componentWillMount(){	
-		var _this = this;
-		axios
-		.get("https://jsonplaceholder.typicode.com/photos")
-		.then(function(result){		
-			_this.setState({
-				photos: result.data
-			  });
-		});
-	   }
+		var fotosObtenidas = { fotos:[] };	
+		
+		} 	  
+	filtrarFotos(albumId){	 		
+		 var _this = this;
+		 axios
+		 .get("https://jsonplaceholder.typicode.com/photos")
+		 .then(function(result){							 
+		 var fotos = result.data;
+		 var filtro = fotos.filter(function(foto){
+			  return foto.albumId == albumId;
+		 })		
+		 _this.fotosObtenidas = filtro;
+		 console.log(filtro);
+		 $(".prueba").append(
+			filtro.map(item => "<div><h3>"+ item.title +"</h3>\
+								<img src="+item.url +"/> </div><hr/>")
 
+		 );
+	  });			   
+  }	   	 
 
     render(){
-        return(<div>
-           (Desde la clase Photos) Aca van las fotos
-        </div>)
+		
+		
+						
+		return <div className="prueba"></div>;
     }
     
 }
