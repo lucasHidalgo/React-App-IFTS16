@@ -8,6 +8,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Album from '../Album/Album.js';
 import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 import {List, ListItem} from 'material-ui/List';
+import Posts from '../Posts/Posts.js';
 
 
 
@@ -36,11 +37,16 @@ export default class Home extends Component{
     render(){            
         return(
             <MuiThemeProvider>
+            <Router>
             <div>
                 <AppBar title="Galería de Fotos" onLeftIconButtonTouchTap= {() => this._toggleDrawer()} />
                 <Drawer open={this.state.drawerOpened} docked={false} onRequestChange={() => this._toggleDrawer()}>            
                     <List>
-                <ListItem><Link to ='/Album'>Albums</Link> </ListItem>
+                <ListItem>Lista de Albums </ListItem>
+                <br/>
+                <ListItem><Album/> </ListItem>
+
+                
                 
 
               </List>
@@ -48,6 +54,7 @@ export default class Home extends Component{
               </Drawer>
           <h4>esto es home</h4>
           </div>
+          </Router>
           </MuiThemeProvider>
         )     
     }   

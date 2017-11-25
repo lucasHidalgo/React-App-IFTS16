@@ -8,7 +8,20 @@ import Posts from '../Posts/Posts.js';
 import '../App.css';
 import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 
-export default class Header extends Component{      
+export default class Header extends Component{
+constructor(){
+       super();
+       this.state = {items:[]}
+            drawerOpened: false     
+   };
+
+   _toggleDrawer(){
+      this.setState({
+          drawerOpened: !this.state.drawerOpened
+     });
+   };
+
+
     render(){            
         return(
            <header>
