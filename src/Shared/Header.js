@@ -15,8 +15,7 @@ export default class Header extends Component{
                <Router>
           <div>
           <nav>
-      <Link to ='/'>Home</Link>
-      <Link to ='/Album'>Albums</Link>      
+      <Link to ='/'>Home</Link>      
       <Link to ='/Album/Comentarios'>Comentarios</Link>
       </nav>
       <Route exact path='/' component={Home}/>
