@@ -34,13 +34,6 @@ export default class Dialogo extends React.Component {
     open: false,
   };
 
-  handleOpen = () => {
-    this.setState({open: true});
-  };
-
-  handleClose = () => {
-    this.setState({open: false});
-  };
 
   render() {
     const actions = [

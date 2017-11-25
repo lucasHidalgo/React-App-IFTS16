@@ -9,6 +9,8 @@ import Album from '../Album/Album.js';
 import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 import {List, ListItem} from 'material-ui/List';
 import Posts from '../Posts/Posts.js';
+import Photos from '../Photos/Photos.js';
+import { } from '../Photos/Photos.js';
 
 
 
@@ -37,7 +39,6 @@ export default class Home extends Component{
     render(){            
         return(
             <MuiThemeProvider>
-            <Router>
             <div>
                 <AppBar title="Galería de Fotos" onLeftIconButtonTouchTap= {() => this._toggleDrawer()} />
                 <Drawer open={this.state.drawerOpened} docked={false} onRequestChange={() => this._toggleDrawer()}>            
@@ -45,16 +46,13 @@ export default class Home extends Component{
                 <ListItem>Lista de Albums </ListItem>
                 <br/>
                 <ListItem><Album/> </ListItem>
-
-                
-                
-
               </List>
 
               </Drawer>
+
+              <Photos />
           <h4>esto es home</h4>
           </div>
-          </Router>
           </MuiThemeProvider>
         )     
     }   

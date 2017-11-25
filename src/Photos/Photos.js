@@ -22,7 +22,7 @@ export default class Photos extends Component{
 		 })		
 		 _this.fotosObtenidas = filtro;
 		 console.log(filtro);
-		 $(".prueba").append(
+		 $(".prueba").html(
 			filtro.map(item => "<div><h3>"+ item.title +"</h3>\
 								<img src="+ item.url+" width=30% height=30%/> </div><hr/>")
 		 );
