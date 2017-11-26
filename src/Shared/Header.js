@@ -30,7 +30,6 @@ constructor(){
           <nav>
 <Link to ='/'>Home</Link>      
 <Link to ='/Album/Comentarios'>Comentarios</Link>
-          
           </nav>
       <Route exact path='/' component={Home}/>
       <Route  path='/Album' component={Album}/>      
