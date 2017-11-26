@@ -5,6 +5,7 @@ import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import {redA700, grey800} from 'material-ui/styles/colors';
 import Album from '../Album/Album.js';
 import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 import {List, ListItem} from 'material-ui/List';
@@ -12,7 +13,12 @@ import Posts from '../Posts/Posts.js';
 import Photos from '../Photos/Photos.js';
 import { } from '../Photos/Photos.js';
 
-
+const muiTheme = getMuiTheme({
+  palette: {
+    primary1Color: redA700,
+    accent1Color: grey800
+  }
+}); 
 
 export default class Home extends Component{    
     constructor(){
@@ -38,7 +44,7 @@ export default class Home extends Component{
    };   
     render(){            
         return(
-            <MuiThemeProvider>
+            <MuiThemeProvider muiTheme={muiTheme}>
             <div>
                 <AppBar title="Galería de Fotos" onLeftIconButtonTouchTap= {() => this._toggleDrawer()} />
                 <Drawer open={this.state.drawerOpened} docked={false} onRequestChange={() => this._toggleDrawer()}>            
@@ -51,6 +57,7 @@ export default class Home extends Component{
               </Drawer>
 
               <Photos />
+              <h1>Bienvenidos a la Galería de Fotos Corteggiano Hidalgo</h1>
           <h4>esto es home</h4>
           </div>
           </MuiThemeProvider>
