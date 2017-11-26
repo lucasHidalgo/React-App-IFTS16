@@ -29,11 +29,11 @@ constructor(){
           <div>
           <nav>
       <Link to ='/'>Home</Link>      
-      <Link to ='/Album/Comentarios'>Comentarios</Link>
+      <Link to ='/Comentarios'>Comentarios</Link>
       </nav>
       <Route exact path='/' component={Home}/>
       <Route  path='/Album' component={Album}/>      
-      <Route  path='/Album/Comentarios' component={Posts}/>
+      <Route  path='/Comentarios' component={Posts}/>
       </div>
         </Router>  
            </header>
