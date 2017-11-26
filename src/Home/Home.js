@@ -58,7 +58,12 @@ export default class Home extends Component{
 
               <Photos />
               <h1>Bienvenidos a la Galería de Fotos Corteggiano Hidalgo</h1>
-          <h4>esto es home</h4>
+          <h3>En esta página podremos ver una serie de albums con las fotos que contiene cada uno de ellos.<br/> Podremos acceder a los albums en el menú deplegable que aparece arriba a la izquierda
+          de la página, ahí dentro podremos ver los albums y seleccionando el boton "Ver Fotos" podremos
+          acceder al contenido de cada uno de ellos.<br/>
+          <br/>
+          Vea los albums, elija el que mas le guste de acuerdo a su estilo, vea sus fotos y disfrute! 
+          </h3>
           </div>
           </MuiThemeProvider>
         )     
