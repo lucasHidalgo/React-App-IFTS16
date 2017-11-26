@@ -12,6 +12,7 @@ import {List, ListItem} from 'material-ui/List';
 import Posts from '../Posts/Posts.js';
 import Photos from '../Photos/Photos.js';
 import { } from '../Photos/Photos.js';
+import GaleriaFotos from '../GaleriaFotos/GaleriaFotos.js';
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -51,12 +52,12 @@ export default class Home extends Component{
                     <List>
                 <ListItem>Lista de Albums </ListItem>
                 <br/>
-                <ListItem><Album/> </ListItem>
+                <ListItem><Album/> </ListItem>                
               </List>
 
               </Drawer>
 
-              <Photos />
+              
               <h1>Bienvenidos a la Galería de Fotos Corteggiano Hidalgo</h1>
           <h3>En esta página podremos ver una serie de albums con las fotos que contiene cada uno de ellos.<br/> Podremos acceder a los albums en el menú deplegable que aparece arriba a la izquierda
           de la página, ahí dentro podremos ver los albums y seleccionando el boton "Ver Fotos" podremos
