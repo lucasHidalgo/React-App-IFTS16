@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-
 import AppBar from 'material-ui/AppBar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {redA700, grey800} from 'material-ui/styles/colors';
+import {redA700, grey900} from 'material-ui/styles/colors';
 
 
 const muiTheme = getMuiTheme({
   palette: {
     primary1Color: redA700,
-    accent1Color: grey800
+    accent1Color: grey900
   }
 }); 
 
@@ -21,13 +20,18 @@ export default class Home extends Component{
         return(
             <MuiThemeProvider muiTheme={muiTheme}>
             <div>
-              <h1>Bienvenidos a la Galería de Fotos Corteggiano Hidalgo</h1>
-          <h3>En esta página podremos ver una serie de albums con las fotos que contiene cada uno de ellos.<br/> Podremos acceder a los albums en el menú deplegable que aparece arriba a la izquierda
-          de la página, ahí dentro podremos ver los albums y seleccionando el boton "Ver Fotos" podremos
-          acceder al contenido de cada uno de ellos.<br/>
+
+                <div id="main">
+              <h3 className="texto">Bienvenidos a la Galería de Fotos Corteggiano - Hidalgo</h3>
+          <h5 className="texto">En este proyecto hay una galeria de fotos que trae todos los albums de 
+          https://jsonplaceholder.typicode.com, <br/> al seleccionar un album los filtra de acuerdo
+          al "AlbumId". <br/>
           <br/>
-          Vea los albums, elija el que mas le guste de acuerdo a su estilo, vea sus fotos y disfrute! 
-          </h3>
+          Este proyecto esta hecho con la libreria React. Cuenta con Material-Ui y Axios para traer los JSON.<br/>
+          GitHub: https://github.com/lucasHidalgo/React-App-IFTS16
+          </h5>
+          </div>
+
           </div>
           </MuiThemeProvider>
         )     
