@@ -8,6 +8,7 @@ import GaleriaFotos from '../GaleriaFotos/GaleriaFotos.js';
 import '../App.css';
 import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 
+
 export default class Header extends Component{
 
     render(){            
