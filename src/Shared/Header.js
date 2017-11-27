@@ -8,7 +8,7 @@ import Posts from '../Posts/Posts.js';
 import GaleriaFotos from '../GaleriaFotos/GaleriaFotos.js';
 import '../App.css';
 import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
-import GaleriaFotos from '../GaleriaFotos/GaleriaFotos.js';
+
 
 export default class Header extends Component{
 constructor(){
@@ -37,7 +37,6 @@ constructor(){
       <Route exact path='/' component={Home}/>
       <Route  path='/GaleriaFotos' component={GaleriaFotos}/>      
       <Route  path='/Comentarios' component={Posts}/>
-<Link to ='/GaleriaFotos'>GaleriaFotos</Link>
       </div>
         </Router>  
            </header>
