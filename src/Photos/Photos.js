@@ -29,10 +29,7 @@ export default class Photos extends Component{
 	  });			   
   }	   	 
 
-    render(){
-		
-		
-						
+    render(){								
 		return <div className="prueba"></div>;
     }
     

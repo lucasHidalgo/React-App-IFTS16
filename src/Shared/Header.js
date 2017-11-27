@@ -7,6 +7,7 @@ import Album from '../Album/Album.js';
 import Posts from '../Posts/Posts.js';
 import '../App.css';
 import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
+import GaleriaFotos from '../GaleriaFotos/GaleriaFotos.js';
 
 export default class Header extends Component{
 constructor(){
@@ -28,12 +29,13 @@ constructor(){
                <Router>
           <div>
           <nav>
-<Link to ='/'>Home</Link>      
-<Link to ='/Album/Comentarios'>Comentarios</Link>
+<Link to ='/'>Home</Link>   
+<Link to ='/GaleriaFotos'>Galeria de albums</Link>   
+<Link to ='/Comentarios'>Comentarios</Link>
           </nav>
       <Route exact path='/' component={Home}/>
-      <Route  path='/Album' component={Album}/>      
-      <Route  path='/Album/Comentarios' component={Posts}/>
+      <Route  path='/GaleriaFotos' component={GaleriaFotos}/>      
+      <Route  path='/Comentarios' component={Posts}/>
       </div>
         </Router>  
            </header>

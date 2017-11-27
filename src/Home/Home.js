@@ -11,7 +11,6 @@ import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 import {List, ListItem} from 'material-ui/List';
 import Posts from '../Posts/Posts.js';
 import Photos from '../Photos/Photos.js';
-import { } from '../Photos/Photos.js';
 import GaleriaFotos from '../GaleriaFotos/GaleriaFotos.js';
 
 const muiTheme = getMuiTheme({
@@ -47,17 +46,6 @@ export default class Home extends Component{
         return(
             <MuiThemeProvider muiTheme={muiTheme}>
             <div>
-                <AppBar title="Galería de Fotos" onLeftIconButtonTouchTap= {() => this._toggleDrawer()} />
-                <Drawer open={this.state.drawerOpened} docked={false} onRequestChange={() => this._toggleDrawer()}>            
-                    <List>
-                <ListItem>Lista de Albums </ListItem>
-                <br/>
-                <ListItem><Album/> </ListItem>                
-              </List>
-
-              </Drawer>
-
-              
               <h1>Bienvenidos a la Galería de Fotos Corteggiano Hidalgo</h1>
           <h3>En esta página podremos ver una serie de albums con las fotos que contiene cada uno de ellos.<br/> Podremos acceder a los albums en el menú deplegable que aparece arriba a la izquierda
           de la página, ahí dentro podremos ver los albums y seleccionando el boton "Ver Fotos" podremos
