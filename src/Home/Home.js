@@ -56,7 +56,7 @@ export default class Home extends Component{
               </List>
 
               </Drawer>
-
+              <Link to ='/GaleriaFotos'>GaleriaFotos</Link>
               
               <h1>Bienvenidos a la Galería de Fotos Corteggiano Hidalgo</h1>
           <h3>En esta página podremos ver una serie de albums con las fotos que contiene cada uno de ellos.<br/> Podremos acceder a los albums en el menú deplegable que aparece arriba a la izquierda

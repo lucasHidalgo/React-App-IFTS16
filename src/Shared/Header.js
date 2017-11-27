@@ -5,6 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Home from '../Home/Home.js';
 import Album from '../Album/Album.js';
 import Posts from '../Posts/Posts.js';
+import GaleriaFotos from '../GaleriaFotos/GaleriaFotos.js';
 import '../App.css';
 import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 
@@ -30,10 +31,11 @@ constructor(){
           <nav>
 <Link to ='/'>Home</Link>      
 <Link to ='/Album/Comentarios'>Comentarios</Link>
+<Link to ='/GaleriaFotos'>GaleriaFotos</Link>
           </nav>
       <Route exact path='/' component={Home}/>
       <Route  path='/Album' component={Album}/>      
-      <Route  path='/Album/Comentarios' component={Posts}/>
+      <Route  path='Album/Comentarios' component={Posts}/>
       </div>
         </Router>  
            </header>
