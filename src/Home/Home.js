@@ -22,7 +22,7 @@ export default class Home extends Component{
             <MuiThemeProvider muiTheme={muiTheme}>
             <div>
               <h1>Bienvenidos a la Galería de Fotos Corteggiano Hidalgo</h1>
-          <h3>En esta página podremos ver una serie de albums con las fotos que contiene cada uno de ellos.<br/> Podremos acceder a los albums en el menú deplegable que aparece arriba a la izquierda
+          <h3>En esta página podremos ver una serie de albums con las fotos que contiene cada uno de ellos.<br/> Podremos acceder a los albums en el menú deplegable que aparece en la Galería de Albums
           de la página, ahí dentro podremos ver los albums y seleccionando el boton "Ver Fotos" podremos
           acceder al contenido de cada uno de ellos.<br/>
           <br/>
