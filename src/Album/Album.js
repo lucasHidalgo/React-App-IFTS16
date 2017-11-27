@@ -35,7 +35,7 @@ export default class Album extends Component{
 		<div>		
 															
 				{albums.map(album => 
-					<ListItem> 	
+					<ListItem key={album.id}> 	
 				<div key={album.id}>
 				<h4>{album.title}</h4>	
 				<MuiThemeProvider>

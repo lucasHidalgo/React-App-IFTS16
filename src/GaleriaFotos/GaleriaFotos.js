@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
