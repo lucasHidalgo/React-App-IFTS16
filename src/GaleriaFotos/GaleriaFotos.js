@@ -7,9 +7,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {redA700, grey800} from 'material-ui/styles/colors';
 import Album from '../Album/Album.js';
-import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 import {List, ListItem} from 'material-ui/List';
-import Posts from '../Posts/Posts.js';
 import Photos from '../Photos/Photos.js';
 
 
@@ -23,7 +21,7 @@ const muiTheme = getMuiTheme({
 export default class GaleriaFotos extends Component{    
     constructor(){
        super();
-       this.state = {items:[]}
+       this.state = {}
             drawerOpened: false     
    };
    _toggleDrawer(){
@@ -32,16 +30,7 @@ export default class GaleriaFotos extends Component{
      });
    };
 
-   componentWillMount(){  
-    var _this = this;
-    axios
-    .get("https://swapi.co/api/people/?fformat=json")
-    .then(function(result){
-        _this.setState({
-            items: result.data.results
-          });
-    });    
-   };   
+  
     render(){            
         return(
             <MuiThemeProvider muiTheme={muiTheme}>

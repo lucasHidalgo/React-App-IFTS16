@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import AppBar from 'material-ui/AppBar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Home from '../Home/Home.js';
 import Album from '../Album/Album.js';
@@ -11,18 +10,6 @@ import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 
 
 export default class Header extends Component{
-constructor(){
-       super();
-       this.state = {items:[]}
-            drawerOpened: false     
-   };
-
-   _toggleDrawer(){
-      this.setState({
-          drawerOpened: !this.state.drawerOpened
-     });
-   };
-
 
     render(){            
         return(

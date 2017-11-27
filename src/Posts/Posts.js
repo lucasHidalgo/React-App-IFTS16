@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {BrowserRouter as Router, Route , Link} from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
-import Dialogo from '../Material-ui/dialog';
-import Photos from '../Photos/Photos.js';
 import {List, ListItem} from 'material-ui/List';
 
 
